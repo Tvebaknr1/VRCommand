@@ -12,12 +12,12 @@ public class myNetworkManeger : NetworkManager
         PlayerOptions Options = gameObject.GetComponent<PlayerOptions>();
         if (i == 0)
         {
-            player = Instantiate(Resources.Load("Players/testPlayer"), transform.position, Quaternion.identity) as GameObject;
+            player = Instantiate(Resources.Load("Players/VRPlayer"), transform.position, Quaternion.identity) as GameObject;
             i++;
         }
         else 
         {
-            player = Instantiate(Resources.Load("Players/VRPlayer"), transform.position, Quaternion.identity) as GameObject;
+            player = Instantiate(Resources.Load("Players/testPlayer"), transform.position, Quaternion.identity) as GameObject;
         }
             
 
