@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
 public class gun : MonoBehaviour {
 
@@ -25,6 +26,7 @@ public class gun : MonoBehaviour {
         switchGun();
     }
     // Update is called once per frame
+    //[Command]
     public void switchGun()
     {
         gunInformation temp = gameObject.GetComponentInChildren<gunInformation>();
@@ -55,8 +57,9 @@ public class gun : MonoBehaviour {
                 {
                     hitpoint = transform.position + (transform.forward * 100);
                 }
-                Debug.Log(hit.collider.gameObject);
+                
                 GameObject temp = GameObject.Instantiate(bullet, transform.position, transform.localRotation);
+                NetworkServer.Spawn(temp);
                 temp.GetComponent<Bullet>().setTarget(hitpoint, bulletSpeed, shootMask);
                 cooldown = 60 / rpm;
                 mag--;
