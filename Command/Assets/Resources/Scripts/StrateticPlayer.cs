@@ -17,13 +17,13 @@ public class StrateticPlayer : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit hit;
-            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            Ray ray = gameObject.GetComponentInChildren<Camera>().ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 100.0f))
             {
-                //suppose i have two objects here named obj1 and obj2.. how do i select obj1 to be transformed 
+                Debug.Log(hit.point);
                 if (hit.transform != null)
                 {
-                    
+                    movement.giveTarget(hit.point);
                 }
             }
         }

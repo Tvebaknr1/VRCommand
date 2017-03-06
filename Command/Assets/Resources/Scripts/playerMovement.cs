@@ -4,7 +4,6 @@ using UnityEngine;
 using UnityEngine.AI;
 
 public class playerMovement : MonoBehaviour {
-    public GameObject goal;
     NavMeshAgent agent;
 
     // Use this for initialization
@@ -15,10 +14,10 @@ public class playerMovement : MonoBehaviour {
        
     
 }
-	
-	// Update is called once per frame
-	void Update () {
-        agent.destination = goal.transform.position;
+
+    public void giveTarget( Vector3 target)
+    {
+        agent.destination = target;
     }
     
 }
