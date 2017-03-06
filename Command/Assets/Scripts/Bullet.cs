@@ -14,24 +14,27 @@ public class Bullet : MonoBehaviour
         transform.LookAt(target);
         this.bulletSpeed = bulletSpeed;
         this.shootMask = shootMask;
-        GameObject.Destroy(this.gameObject, 2);
+        GameObject.Destroy(this.gameObject, 5);
     }
     public void Update()
     {
         transform.position += transform.forward * Time.deltaTime * bulletSpeed;
 
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, Time.deltaTime, shootMask))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, Time.deltaTime *bulletSpeed*  1.1f, shootMask))
         {
+            Debug.Log(hit.collider.gameObject);
+
+            GameObject other = hit.collider.gameObject;
+            if (other.GetComponent<Health>() != null)
+            {
+                other.GetComponent<Health>().TakeDamage(10);
+            }
+            else if(other.GetComponentInParent<Health>()!= null)
+            {
+                other.GetComponentInParent<Health>().TakeDamage(10);
+            }
             GameObject.Destroy(this.gameObject);
-        }
-    }
-    private void OnCollisionEnter(Collision collision)
-    {
-        GameObject other = collision.gameObject;
-        if ( other.GetComponent<Health>() != null)
-        {
-            other.GetComponent<Health>().TakeDamage(10);
         }
     }
 }

@@ -9,4 +9,5 @@ public class gunInformation : MonoBehaviour {
     public LayerMask shootMask;
     public int rpm;
     public int magsize;
+    public AudioClip gunsound;
 }
