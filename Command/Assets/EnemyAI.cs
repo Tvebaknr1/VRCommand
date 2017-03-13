@@ -8,7 +8,7 @@ public class EnemyAI : MonoBehaviour {
     NavMeshAgent agent;
     // Use this for initialization
     void Awake () {
-        
+        agent = gameObject.GetComponent<NavMeshAgent>();
 	}
 
     // Update is called once per frame
@@ -16,7 +16,7 @@ public class EnemyAI : MonoBehaviour {
         player = GameObject.FindGameObjectWithTag("VRPlayer");
         if (player != null)
         {
-            //agent.SetDestination(player.transform.position);
+            agent.SetDestination(player.transform.position);
             return;
         }
         
