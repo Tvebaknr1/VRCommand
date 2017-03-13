@@ -1,0 +1,26 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.AI;
+
+public class EnemyAI : MonoBehaviour {
+    public GameObject player;
+    NavMeshAgent agent;
+    // Use this for initialization
+    void Awake () {
+        
+	}
+
+    // Update is called once per frame
+    void Update() {
+        player = GameObject.FindGameObjectWithTag("VRPlayer");
+        if (player != null)
+        {
+            //agent.SetDestination(player.transform.position);
+            return;
+        }
+        
+        
+
+    }
+}
