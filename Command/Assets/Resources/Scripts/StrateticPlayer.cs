@@ -8,7 +8,13 @@ public class StrateticPlayer : MonoBehaviour
     // Use this for initialization
     void Awake()
     {
-        movement = GameObject.FindGameObjectWithTag("VRPlayer").GetComponent<playerMovement>() ;
+        //movement = GameObject.FindGameObjectWithTag("VRPlayer").GetComponent<playerMovement>() ;
+        GameObject temp = new GameObject();
+        temp.name = "Fuck unity and camaras";
+        temp.AddComponent<Camera>();
+        temp.transform.SetParent(this.transform);
+        temp.transform.position = new Vector3(0, 0, 0);
+        temp.transform.rotation = new Quaternion(0, 0, 90, 0);
     }
 
     // Update is called once per frame
@@ -26,6 +32,12 @@ public class StrateticPlayer : MonoBehaviour
                     movement.giveTarget(hit.point);
                 }
             }
+        }
+        float vertical = Input.GetAxis("Vertical") * 10 * Time.deltaTime;
+        float horizontal = Input.GetAxis("Horizontal") * 10 * Time.deltaTime;
+        transform.Translate(horizontal, 0, vertical);
+        {
+
         }
     }
 }
