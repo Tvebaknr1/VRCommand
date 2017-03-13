@@ -12,6 +12,7 @@ public class StrateticPlayer : MonoBehaviour
         GameObject temp = new GameObject();
         temp.name = "Fuck unity and camaras";
         temp.AddComponent<Camera>();
+        temp.tag = "strategyCam";
         temp.transform.SetParent(this.transform);
         temp.transform.position = new Vector3(0, 0, 0);
         temp.transform.rotation = new Quaternion(0, 0, 90, 0);
