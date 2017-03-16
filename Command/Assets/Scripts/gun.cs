@@ -17,7 +17,7 @@ public class gun : NetworkBehaviour {
     public float cooldown;
     public AudioClip gunSound;
     public AudioClip reloadSound;
-    public player player;
+    public shot player;
 
     private SteamVR_Controller.Device Controller
     {
@@ -27,7 +27,7 @@ public class gun : NetworkBehaviour {
     {
         trackedObj = GetComponent<SteamVR_TrackedObject>();
         switchGun();
-        player = GetComponentInParent<playerMovement>().GetComponentInChildren<player>();
+        player = transform.GetComponentInParent<Transform>().GetComponentInParent<shot>();
     }
     // Update is called once per frame
     //[Command]
