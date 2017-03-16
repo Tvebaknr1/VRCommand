@@ -8,7 +8,7 @@ public class player : MonoBehaviour {
     {
         var temp = Instantiate(vrplayer);
         temp.transform.parent = this.transform;
-        var camera = GameObject.FindGameObjectWithTag("strategyCam").GetComponent<Camera>();
-        camera.enabled = false;
+        //var camera = GameObject.FindGameObjectWithTag("strategyCam").GetComponent<Camera>();
+        //camera.enabled = false;
     }
 }

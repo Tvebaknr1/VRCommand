@@ -15,7 +15,8 @@ public class gun : MonoBehaviour {
     public LayerMask shootMask;
     public int rpm;
     public float cooldown;
-    public AudioClip gunsound;
+    public AudioClip gunSound;
+    public AudioClip reloadSound;
 
     private SteamVR_Controller.Device Controller
     {
@@ -37,7 +38,8 @@ public class gun : MonoBehaviour {
         bullet = temp.bullet;
         magsize = temp.magsize;
         mag = magsize;
-        gunsound = temp.gunsound;
+        gunSound = temp.gunsound;
+        reloadSound = temp.reloadSound;
     }
     void Update () {
         cooldown -= Time.deltaTime;
@@ -46,7 +48,7 @@ public class gun : MonoBehaviour {
            
             if (cooldown < 0 && mag > 0 )
             {
-                soundplay();
+                soundplay(gunSound);
                 RaycastHit hit;
                 // 2
 
@@ -68,12 +70,23 @@ public class gun : MonoBehaviour {
                 mag--;
             }
         }
+        else if (Controller.GetPress(SteamVR_Controller.ButtonMask.Grip))
+        {
+            if (mag <= 0)
+            {
+
+                mag = magsize;
+                soundplay(reloadSound);
+
+            }
+                
+        }
 
     }
-    void soundplay()
+    void soundplay(AudioClip sound)
     {
         AudioSource soundmaker = this.gameObject.GetComponent<AudioSource>();
-        soundmaker.clip = gunsound;
+        soundmaker.clip = sound;
         soundmaker.Play();
 
     }
