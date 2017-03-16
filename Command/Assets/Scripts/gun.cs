@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class gun : MonoBehaviour {
+public class gun : NetworkBehaviour {
 
     private SteamVR_TrackedObject trackedObj;
     private Vector3 hitpoint;
@@ -17,6 +17,7 @@ public class gun : MonoBehaviour {
     public float cooldown;
     public AudioClip gunSound;
     public AudioClip reloadSound;
+    public player player;
 
     private SteamVR_Controller.Device Controller
     {
@@ -26,6 +27,7 @@ public class gun : MonoBehaviour {
     {
         trackedObj = GetComponent<SteamVR_TrackedObject>();
         switchGun();
+        player = GetComponentInParent<playerMovement>().GetComponentInChildren<player>();
     }
     // Update is called once per frame
     //[Command]
@@ -62,10 +64,8 @@ public class gun : MonoBehaviour {
                 {
                     hitpoint = transform.position + (transform.forward * 100);
                 }
-                
-                GameObject temp = GameObject.Instantiate(bullet, transform.position, transform.localRotation);
-                NetworkServer.Spawn(temp);
-                temp.GetComponent<Bullet>().setTarget(hitpoint, bulletSpeed, shootMask);
+
+                player.Shoot(transform.position, transform.localRotation, hitpoint, bullet, shootMask, bulletSpeed);
                 cooldown = 60 / rpm;
                 mag--;
             }
