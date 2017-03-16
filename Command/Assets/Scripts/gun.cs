@@ -7,7 +7,7 @@ public class gun : MonoBehaviour {
 
     private SteamVR_TrackedObject trackedObj;
     private Vector3 hitpoint;
-    private int mag;
+    public int mag;
 
     public GameObject bullet;
     public int magsize;
@@ -48,7 +48,7 @@ public class gun : MonoBehaviour {
            
             if (cooldown < 0 && mag > 0 )
             {
-                soundplay(gunSound);
+                //soundplay(gunSound);
                 RaycastHit hit;
                 // 2
 
