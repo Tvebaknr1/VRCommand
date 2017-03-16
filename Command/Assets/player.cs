@@ -18,7 +18,7 @@ public class player : NetworkBehaviour {
         }
     }
     [Command]
-    public void Shoot(Vector3 startingPoint,Quaternion rotation, Vector3 direction,GameObject bullet,LayerMask shootMask, int bulletSpeed)
+    public void Cmd_Shoot(Vector3 startingPoint,Quaternion rotation, Vector3 direction,GameObject bullet,LayerMask shootMask, int bulletSpeed)
     {
         GameObject temp = GameObject.Instantiate(bullet, startingPoint, rotation);
         NetworkServer.Spawn(temp);
