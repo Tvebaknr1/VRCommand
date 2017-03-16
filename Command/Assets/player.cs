@@ -13,8 +13,8 @@ public class player : MonoBehaviour {
         networkman= GameObject.FindGameObjectWithTag("VRPlayer").GetComponent<NetworkIdentity>().isClient;
         if(networkman)
         {
-            var camera = GameObject.FindGameObjectWithTag("strategyCam").GetComponent<Camera>();
-            camera.enabled = false;
+            //var camera = GameObject.FindGameObjectWithTag("strategyCam").GetComponent<Camera>();
+            //camera.enabled = false;
         }
     }
 }
