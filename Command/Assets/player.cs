@@ -5,11 +5,12 @@ using UnityEngine.Networking;
 
 public class player : MonoBehaviour {
     public GameObject vrplayer;
+    public bool networkman;
     private void Awake()
     {
         var temp = Instantiate(vrplayer);
         temp.transform.parent = this.transform;
-        var networkman= GameObject.FindGameObjectWithTag("VRPlayer").GetComponent<NetworkIdentity>().isClient;
+        networkman= GameObject.FindGameObjectWithTag("VRPlayer").GetComponent<NetworkIdentity>().isClient;
         if(networkman)
         {
             var camera = GameObject.FindGameObjectWithTag("strategyCam").GetComponent<Camera>();
