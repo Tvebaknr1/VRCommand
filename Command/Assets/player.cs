@@ -15,6 +15,5 @@ public class player : MonoBehaviour {
             var camera = GameObject.FindGameObjectWithTag("strategyCam").GetComponent<Camera>();
             camera.enabled = false;
         }
-
     }
 }
