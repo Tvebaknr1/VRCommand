@@ -21,7 +21,7 @@ public class StrateticPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(movement == null)
+        if(movement == null )
         {
             movement = GameObject.FindGameObjectWithTag("VRPlayer").GetComponent<playerMovement>();
         }
