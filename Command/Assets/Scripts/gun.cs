@@ -64,7 +64,7 @@ public class gun : NetworkBehaviour {
                 {
                     hitpoint = transform.position + (transform.forward * 100);
                 }
-                CmdShoot(transform.position, transform.localRotation, hitpoint, bullet, bulletSpeed);
+                player.CmdShoot(transform.position, transform.localRotation, hitpoint, bullet, bulletSpeed);
                 cooldown = 60 / rpm;
                 mag--;
             }
@@ -82,13 +82,7 @@ public class gun : NetworkBehaviour {
         }
 
     }
-    [Command]
-    public void CmdShoot(Vector3 startingPoint, Quaternion rotation, Vector3 direction, GameObject bullet, int bulletSpeed)
-    {
-        GameObject temp = GameObject.Instantiate(bullet, startingPoint, rotation);
-        temp.GetComponent<Bullet>().setTarget(direction, bulletSpeed, shootMask);
-        NetworkServer.Spawn(temp);
-    }
+    
     void soundplay(AudioClip sound)
     {
         AudioSource soundmaker = this.gameObject.GetComponent<AudioSource>();
