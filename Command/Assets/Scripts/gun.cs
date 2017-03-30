@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class gun : NetworkBehaviour {
+public class gun : MonoBehaviour {
 
     private SteamVR_TrackedObject trackedObj;
     private Vector3 hitpoint;
