@@ -16,6 +16,8 @@ public class fixmultiplayer : MonoBehaviour {
         {
             tra.gameObject.SetActive(true);
         }
+        if (temp != null)
+            Destroy(this);
 
     }
 }
