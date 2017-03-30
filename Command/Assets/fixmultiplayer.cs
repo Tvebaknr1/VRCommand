@@ -11,7 +11,7 @@ public class fixmultiplayer : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        var temp = this.transform.GetComponentInChildren<MeshRenderer>().GetComponent<Transform>().GetComponentInChildren<gun>();
+        var temp = this.transform.GetComponentInChildren<MeshRenderer>(true).GetComponent<Transform>().GetComponentInChildren<gun>(true);
         temp.gameObject.SetActive(true);
         Debug.Log(temp);
 
