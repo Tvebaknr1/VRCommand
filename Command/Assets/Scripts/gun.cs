@@ -47,6 +47,7 @@ public class gun : MonoBehaviour {
         cooldown -= Time.deltaTime;
         if (Controller.GetPress(SteamVR_Controller.ButtonMask.Touchpad))
         {
+          
            
             if (cooldown < 0 && mag > 0 )
             {
@@ -67,7 +68,9 @@ public class gun : MonoBehaviour {
                 player.CmdShoot(transform.position, transform.localRotation, hitpoint, bullet, bulletSpeed);
                 cooldown = 60 / rpm;
                 mag--;
+                Debug.Log("fuck it");
             }
+            
         }
         else if (Controller.GetPress(SteamVR_Controller.ButtonMask.Grip))
         {

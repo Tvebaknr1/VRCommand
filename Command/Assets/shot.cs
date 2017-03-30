@@ -9,6 +9,7 @@ public class shot : NetworkBehaviour {
     [Command]
     public void CmdShoot(Vector3 startingPoint, Quaternion rotation, Vector3 direction, GameObject bullet, int bulletSpeed)
     {
+        Debug.Log("fuck dis");
         gun gun = this.transform.GetComponentInChildren<MeshRenderer>(true).GetComponent<Transform>().GetComponentInChildren<gun>();
         this.bullet = gun.bullet;
         GameObject temp = GameObject.Instantiate(this.bullet, startingPoint, rotation);

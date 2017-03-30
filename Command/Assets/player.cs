@@ -10,14 +10,22 @@ public class player : MonoBehaviour {
 
     private void Awake()
     {
-        var temp = Instantiate(vrplayer);
-        temp.transform.parent = this.transform;
-        networkman= GameObject.FindGameObjectWithTag("VRPlayer").GetComponent<NetworkIdentity>().isClient;
-        if(!networkman)
+        try
         {
-            //var camera = GameObject.FindGameObjectWithTag("strategyCam").GetComponent<Camera>();
-            //camera.enabled = false;
+            var temp = Instantiate(vrplayer);
+            temp.transform.parent = this.transform;
+            networkman = GameObject.FindGameObjectWithTag("VRPlayer").GetComponent<NetworkIdentity>().isClient;
+            if (!networkman)
+            {
+                var camera = GameObject.FindGameObjectWithTag("strategyCam").GetComponent<Camera>();
+                camera.enabled = false;
+            }
         }
+        catch(UnassignedReferenceException ex)
+        {
+            Debug.Log(this);
+        }
+        
     }
     
 }
