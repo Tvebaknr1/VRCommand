@@ -66,7 +66,7 @@ public class gun : MonoBehaviour {
                 {
                     hitpoint = transform.position + (transform.forward * 100);
                 }
-                player.CmdShoot(transform.position, transform.localRotation, hitpoint,bulletSpeed);
+                player.CmdShoot();
                 cooldown = 60 / rpm;
                 mag--;
                 Debug.Log("fuck it");
