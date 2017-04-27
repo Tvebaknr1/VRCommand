@@ -66,6 +66,7 @@ public class gun : NetworkBehaviour {
                 {
                     hitpoint = transform.position + (transform.forward * 100);
                 }
+                player.shoot(hitpoint, trackedObj.transform.position, bulletSpeed);
                 player.CmdShoot();
                 cooldown = 60 / rpm;
                 mag--;

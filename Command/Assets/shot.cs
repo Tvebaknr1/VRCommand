@@ -5,7 +5,24 @@ using UnityEngine.Networking;
 
 public class shot : NetworkBehaviour {
     private LayerMask shootMask;
+    
     public GameObject bullet;
+
+    public LayerMask shootmask;
+    private Vector3 direction;
+
+    private Vector3 start;
+    private Vector3 rotation;
+    private int bulletSpeed;
+
+    public void shoot(Vector3 direction, Vector3 start, int bulletSpeed)
+    {
+        this.direction = direction;
+        this.start = start;
+        this.bulletSpeed = bulletSpeed;
+        CmdShoot();
+    }
+
     [Command]
     public void CmdShoot()
     {
@@ -14,7 +31,7 @@ public class shot : NetworkBehaviour {
         //this.bullet = gun.bullet;
         //GameObject temp = (GameObject)Network.Instantiate(this.bullet, startingPoint, rotation, 0);
         GameObject temp = Instantiate(this.bullet, this.transform.position, this.transform.rotation);
-        //temp.GetComponent<Bullet>().setTarget(direction, bulletSpeed, shootMask);
+        temp.GetComponent<Bullet>().setTarget(direction, bulletSpeed, shootMask);
 
         NetworkServer.Spawn(temp);
     }
