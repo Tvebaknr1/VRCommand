@@ -18,6 +18,7 @@ public class grappy : MonoBehaviour {
     void Awake()
     {
         trackedObj = GetComponent<SteamVR_TrackedObject>();
+        Debug.Log("trackedObj: " + trackedObj.index);
     }
     private void SetCollidingObject(Collider col)
     {
@@ -92,6 +93,7 @@ public class grappy : MonoBehaviour {
         // 1
         if (Controller.GetHairTriggerDown())
         {
+            Debug.Log("controller: " + Controller);
             if (collidingObject)
             {
                 GrabObject();

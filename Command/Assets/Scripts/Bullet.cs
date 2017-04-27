@@ -12,7 +12,7 @@ public class Bullet : NetworkBehaviour
     public void setTarget(Vector3 target, int bulletSpeed, LayerMask shootMask)
     {
         this.target = target;
-        transform.LookAt(target);
+        transform.LookAt(this.target);
         this.bulletSpeed = bulletSpeed;
         this.shootMask = shootMask;
         GameObject.Destroy(this.gameObject, 5);
