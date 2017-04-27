@@ -38,6 +38,9 @@ public class shot : NetworkBehaviour {
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Time.timeScale = 0.1F;
             CmdShoot();
+        }
     }
 }
