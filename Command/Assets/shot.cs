@@ -12,8 +12,10 @@ public class shot : NetworkBehaviour {
         Debug.Log("fuck dis");
         gun gun = this.transform.GetComponentInChildren<MeshRenderer>(true).GetComponent<Transform>().GetComponentInChildren<gun>();
         this.bullet = gun.bullet;
-        GameObject temp = GameObject.Instantiate(this.bullet, startingPoint, rotation);
+        GameObject temp = (GameObject)Network.Instantiate(this.bullet, startingPoint, rotation, 0);
+        //GameObject temp = GameObject.Instantiate(this.bullet, startingPoint, rotation);
         temp.GetComponent<Bullet>().setTarget(direction, bulletSpeed, shootMask);
-        NetworkServer.Spawn(temp);
+        
+        //NetworkServer.SpawnWithClientAuthority(temp,netID.connectionToClient);
     }
 }

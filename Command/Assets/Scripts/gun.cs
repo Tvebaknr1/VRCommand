@@ -45,7 +45,6 @@ public class gun : MonoBehaviour {
     }
     void Update () {
         cooldown -= Time.deltaTime;
-        Debug.Log("Controllor test: " + Controller);
         
         if (Controller.GetPress(SteamVR_Controller.ButtonMask.Touchpad))
         {
