@@ -15,7 +15,12 @@ public class shot : NetworkBehaviour {
         //GameObject temp = (GameObject)Network.Instantiate(this.bullet, startingPoint, rotation, 0);
         GameObject temp = Instantiate(this.bullet, this.transform.position, this.transform.rotation);
         //temp.GetComponent<Bullet>().setTarget(direction, bulletSpeed, shootMask);
-        
+
         NetworkServer.Spawn(temp);
+    }
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+            CmdShoot();
     }
 }

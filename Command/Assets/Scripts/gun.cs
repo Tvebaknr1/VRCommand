@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class gun : MonoBehaviour {
+public class gun : NetworkBehaviour {
 
     private SteamVR_TrackedObject trackedObj;
     private Vector3 hitpoint;
@@ -87,6 +87,7 @@ public class gun : MonoBehaviour {
 
     }
     
+
 
     void soundplay(AudioClip sound)
     {
