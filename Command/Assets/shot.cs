@@ -9,10 +9,12 @@ public class shot : NetworkBehaviour {
     public GameObject bullet;
 
     public LayerMask shootmask;
+    [SyncVar]
     private Vector3 direction;
-
+    [SyncVar]
     private Vector3 start;
     private Vector3 rotation;
+    [SyncVar]
     private int bulletSpeed;
 
     public void shoot(Vector3 direction, Vector3 start, int bulletSpeed)
