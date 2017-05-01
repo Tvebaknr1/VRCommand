@@ -20,13 +20,14 @@ public class shot : NetworkBehaviour {
         this.direction = direction;
         this.start = start;
         this.bulletSpeed = bulletSpeed;
+        Debug.Log(direction+" "+ start);
         CmdShoot();
     }
 
     [Command]
     public void CmdShoot()
     {
-        Debug.Log("fuck dis");
+        Debug.Log(direction + " " + start);
         //gun gun = this.transform.GetComponentInChildren<MeshRenderer>(true).GetComponent<Transform>().GetComponentInChildren<gun>();
         //this.bullet = gun.bullet;
         //GameObject temp = (GameObject)Network.Instantiate(this.bullet, startingPoint, rotation, 0);
