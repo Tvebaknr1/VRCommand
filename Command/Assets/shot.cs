@@ -30,7 +30,7 @@ public class shot : NetworkBehaviour {
         //gun gun = this.transform.GetComponentInChildren<MeshRenderer>(true).GetComponent<Transform>().GetComponentInChildren<gun>();
         //this.bullet = gun.bullet;
         //GameObject temp = (GameObject)Network.Instantiate(this.bullet, startingPoint, rotation, 0);
-        GameObject temp = Instantiate(this.bullet, this.transform.position, this.transform.rotation);
+        GameObject temp = Instantiate(this.bullet, start, new Quaternion (0,0,0,0));
         temp.GetComponent<Bullet>().setTarget(direction, bulletSpeed, shootMask);
 
         NetworkServer.Spawn(temp);
