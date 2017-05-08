@@ -34,7 +34,7 @@ public class StrateticPlayer : MonoBehaviour
                 //Debug.Log(hit.point);
                 if (hit.transform != null)
                 {
-                    movement.CmdgiveTarget(hit.point);
+                    movement.giveTarget(hit.point);
                 }
             }
         }
