@@ -32,11 +32,6 @@ public class playerMovement : NetworkBehaviour {
     
     public void giveTarget(Vector3 target)
     {
-        CmdgiveTarget(target);
-    }
-    [Command]
-    public void CmdgiveTarget( Vector3 target)
-    {
         Debug.Log("move to" + target);
         goal = target;
     }
