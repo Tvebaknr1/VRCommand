@@ -11,4 +11,5 @@ public class gunInformation : MonoBehaviour {
     public int magsize;
     public AudioClip gunsound;
     public AudioClip reloadSound;
+    public int dam;
 }
