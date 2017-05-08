@@ -7,27 +7,26 @@ public class shot : NetworkBehaviour {
     private LayerMask shootMask;
     
     public GameObject bullet;
-
-    public LayerMask shootmask;
+    
     private Vector3 direction;
     private Vector3 start;
     private Vector3 rotation;
     private int bulletSpeed;
-
-    [Client]
-    public void shoot(Vector3 direction, Vector3 start, int bulletSpeed)
+    
+    public void shoot(Vector3 direction, Vector3 start, int bulletSpeed,LayerMask shootmask)
     {
         this.direction = direction;
         this.start = start;
         this.bulletSpeed = bulletSpeed;
-        Debug.Log(direction+" "+ start);
+        this.shootMask = shootmask;
+        //Debug.Log(direction+" "+ start);
         CmdShoot();
     }
 
     [Command]
     public void CmdShoot()
     {
-        Debug.Log(direction + " " + start);
+        //Debug.Log(direction + " " + start);
         //gun gun = this.transform.GetComponentInChildren<MeshRenderer>(true).GetComponent<Transform>().GetComponentInChildren<gun>();
         //this.bullet = gun.bullet;
         //GameObject temp = (GameObject)Network.Instantiate(this.bullet, startingPoint, rotation, 0);

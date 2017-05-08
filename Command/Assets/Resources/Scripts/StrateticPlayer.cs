@@ -31,10 +31,10 @@ public class StrateticPlayer : MonoBehaviour
             Ray ray = gameObject.GetComponentInChildren<Camera>().ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 100.0f))
             {
-                Debug.Log(hit.point);
+                //Debug.Log(hit.point);
                 if (hit.transform != null)
                 {
-                    movement.giveTarget(hit.point);
+                    movement.CmdgiveTarget(hit.point);
                 }
             }
         }

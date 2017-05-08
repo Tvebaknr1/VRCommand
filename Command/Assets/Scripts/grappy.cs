@@ -93,7 +93,6 @@ public class grappy : MonoBehaviour {
         // 1
         if (Controller.GetHairTriggerDown())
         {
-            Debug.Log("controller: " + Controller);
             if (collidingObject)
             {
                 GrabObject();

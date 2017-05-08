@@ -16,7 +16,6 @@ public class Bullet : NetworkBehaviour
         this.bulletSpeed = bulletSpeed;
         this.shootMask = shootMask;
         GameObject.Destroy(this.gameObject, 5);
-        Debug.Log("TargetPosition" + target);
     }
     public void Update()
     {

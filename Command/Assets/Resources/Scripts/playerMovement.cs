@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -28,10 +29,9 @@ public class playerMovement : NetworkBehaviour {
         //parent.transform.position += transform.forward * agent.speed * Time.deltaTime;
 
     }
-    
-    public void giveTarget( Vector3 target)
+    [Command]
+    public void CmdgiveTarget( Vector3 target)
     {
         goal = target;
     }
-    
 }
