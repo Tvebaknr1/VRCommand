@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class StrateticPlayer : MonoBehaviour
+public class StrateticPlayer : NetworkBehaviour
 {
     public playerMovement movement;
     // Use this for initialization
@@ -34,7 +35,7 @@ public class StrateticPlayer : MonoBehaviour
                 //Debug.Log(hit.point);
                 if (hit.transform != null)
                 {
-                    movement.giveTarget(hit.point);
+                    CmdgiveTarget(hit.point);
                 }
             }
         }
@@ -44,5 +45,10 @@ public class StrateticPlayer : MonoBehaviour
         {
 
         }
+    }
+    [Command]
+    private void CmdgiveTarget(Vector3 target)
+    {
+        movement.giveTarget(target);
     }
 }
