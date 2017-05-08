@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class StrateticPlayer : MonoBehaviour
+public class StrateticPlayer : NetworkBehaviour
 {
     public playerMovement movement;
     // Use this for initialization
