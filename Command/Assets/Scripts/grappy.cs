@@ -18,6 +18,7 @@ public class grappy : MonoBehaviour {
     void Awake()
     {
         trackedObj = GetComponent<SteamVR_TrackedObject>();
+        Debug.Log("trackedObj: " + trackedObj.index);
     }
     private void SetCollidingObject(Collider col)
     {

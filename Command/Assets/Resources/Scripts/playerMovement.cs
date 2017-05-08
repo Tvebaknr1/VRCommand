@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -29,9 +30,14 @@ public class playerMovement : NetworkBehaviour {
 
     }
     
-    public void giveTarget( Vector3 target)
+    public void giveTarget(Vector3 target)
     {
+        CmdgiveTarget(target);
+    }
+    [Command]
+    public void CmdgiveTarget( Vector3 target)
+    {
+        Debug.Log("move to" + target);
         goal = target;
     }
-    
 }

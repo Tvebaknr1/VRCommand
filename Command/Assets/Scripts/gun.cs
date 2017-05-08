@@ -45,8 +45,10 @@ public class gun : NetworkBehaviour {
     }
     void Update () {
         cooldown -= Time.deltaTime;
+        
         if (Controller.GetPress(SteamVR_Controller.ButtonMask.Touchpad))
         {
+          
            
             if (cooldown < 0 && mag > 0 )
             {
@@ -64,10 +66,12 @@ public class gun : NetworkBehaviour {
                 {
                     hitpoint = transform.position + (transform.forward * 100);
                 }
-                player.CmdShoot(transform.position, transform.localRotation, hitpoint, bullet, bulletSpeed);
+                player.shoot(hitpoint, trackedObj.transform.position, bulletSpeed, shootMask);
+                //player.CmdShoot();
                 cooldown = 60 / rpm;
                 mag--;
             }
+            
         }
         else if (Controller.GetPress(SteamVR_Controller.ButtonMask.Grip))
         {
@@ -83,6 +87,8 @@ public class gun : NetworkBehaviour {
 
     }
     
+
+
     void soundplay(AudioClip sound)
     {
         AudioSource soundmaker = this.gameObject.GetComponent<AudioSource>();

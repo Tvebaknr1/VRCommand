@@ -13,17 +13,22 @@ public class myNetworkManeger : NetworkManager
         if (i == 0)
 
         {
-            player = Instantiate(Resources.Load("Players/testPlayer"), transform.position, Quaternion.identity) as GameObject;
-            //player = Instantiate(Resources.Load("Players/VRPlayer"), transform.position, Quaternion.identity) as GameObject;
+            //player = Instantiate(Resources.Load("Players/testPlayer"), transform.position, Quaternion.identity) as GameObject;
+            player = Instantiate(Resources.Load("Players/VRPlayer"), transform.position, Quaternion.identity) as GameObject;
 
             i++;
         }
         else 
         {
-            player = Instantiate(Resources.Load("Players/VRPlayer"), transform.position, Quaternion.identity) as GameObject;
-            //player = Instantiate(Resources.Load("Players/testPlayer"), transform.position, Quaternion.identity) as GameObject;
-            GameObject.FindGameObjectWithTag("Spawner").GetComponent<EnemySpawner>().player = player;
-
+            //player = Instantiate(Resources.Load("Players/VRPlayer"), transform.position, Quaternion.identity) as GameObject;
+            player = Instantiate(Resources.Load("Players/testPlayer"), transform.position, Quaternion.identity) as GameObject;
+            bool networkman = GameObject.FindGameObjectWithTag("VRPlayer").GetComponent<NetworkIdentity>().isClient;
+            
+            if (networkman)
+            {
+                var camera = GameObject.FindGameObjectWithTag("strategyCam").GetComponent<Camera>();
+                camera.enabled = false;
+            }
         }
             
 
