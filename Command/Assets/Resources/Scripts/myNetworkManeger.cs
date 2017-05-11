@@ -15,8 +15,7 @@ public class myNetworkManeger : NetworkManager
         {
             //player = Instantiate(Resources.Load("Players/testPlayer"), transform.position, Quaternion.identity) as GameObject;
             player = Instantiate(Resources.Load("Players/VRPlayer"), transform.position, Quaternion.identity) as GameObject;
-            GameObject.FindGameObjectWithTag("enemySpawner").GetComponents<EnemySpawner>().SetPlayer(player);
-            i++;
+            GameObject.FindGameObjectWithTag("enemySpawner").GetComponent<EnemySpawner>().SetPlayer(player);
         }
         else 
         {

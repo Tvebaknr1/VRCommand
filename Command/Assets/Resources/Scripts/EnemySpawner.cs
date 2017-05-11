@@ -38,7 +38,7 @@ public class EnemySpawner : NetworkBehaviour {
                 if (hit.collider.gameObject != player 
                     && Vector3.Distance(spawnPoints[spawn], player.transform.position) > spawnRange)
                 {
-                    var enemy = (GameObject)Instantiate(Enemy, spawnPosition, spawnRotation);
+                    GameObject enemy = Instantiate(Enemy, spawnPosition, spawnRotation);
                     NetworkServer.Spawn(enemy);
                     spawnCooldown += 60 / spawnsPerMinute;
                 }
