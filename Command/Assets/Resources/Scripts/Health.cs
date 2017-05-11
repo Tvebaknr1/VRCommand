@@ -13,11 +13,12 @@ public class Health : NetworkBehaviour
 
     [SyncVar(hook = "OnChangeHealth")]
     public int currentHealth = maxHealth;
-
+    public Score score;
     public RectTransform healthBar;
 
     void Start()
     {
+        
         if (isLocalPlayer)
         {
             spawnPoints = FindObjectsOfType<NetworkStartPosition>();
@@ -33,6 +34,7 @@ public class Health : NetworkBehaviour
         {
             if (destroyOnDeath)
             {
+                score.incScore(1);
                 Destroy(gameObject);
             }
             else
