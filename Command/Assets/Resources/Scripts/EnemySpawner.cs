@@ -11,12 +11,12 @@ public class EnemySpawner : NetworkBehaviour {
     public GameObject player;
     public float spawnRange;
 	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+	public void SetPlayer(GameObject player)
+    {
+        this.player = player;
+    }
+    // Update is called once per frame
+    void Update () {
         spawnCooldown -= Time.deltaTime;
         if (0 > spawnCooldown)
         {
