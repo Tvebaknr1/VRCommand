@@ -50,10 +50,10 @@ public class EnemySpawner : NetworkBehaviour {
                         spawnCooldown += 60 / spawnsPerMinute;
                     }
                 }
-                Debug.DrawRay(spawnPosition, player.transform.position - spawnPosition, Color.green);
-                Debug.Log(player);
-                Debug.Log(player.transform.position);
-                Debug.Log(hit.collider.gameObject);
+                //Debug.DrawRay(spawnPosition, player.transform.position - spawnPosition, Color.green);
+                //Debug.Log(player);
+                //Debug.Log(player.transform.position);
+                //Debug.Log(hit.collider.gameObject);
                
             }
         }

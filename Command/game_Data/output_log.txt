@@ -19,7 +19,7 @@ Platform assembly: C:\Users\Admin\Documents\VRCommand\Command\game_Data\Managed\
 Loading C:\Users\Admin\Documents\VRCommand\Command\game_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
 Platform assembly: C:\Users\Admin\Documents\VRCommand\Command\game_Data\Managed\UnityEngine.VR.dll (this message is harmless)
 Loading C:\Users\Admin\Documents\VRCommand\Command\game_Data\Managed\UnityEngine.VR.dll into Unity Child Domain
-- Completed reload, in  0.135 seconds
+- Completed reload, in  0.114 seconds
 Platform assembly: C:\Users\Admin\Documents\VRCommand\Command\game_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Admin\Documents\VRCommand\Command\game_Data\Managed\System.dll (this message is harmless)
 <RI> Initializing input.
@@ -30,15 +30,11 @@ OpenVR initialized!
  
 (Filename:  Line: 381)
 
-The referenced script on this Behaviour (Game Object 'Bullet') is missing!
- 
-(Filename:  Line: 1754)
-
-UnloadTime: 0.442251 ms
+UnloadTime: 0.423345 ms
 Setting up 2 worker threads for Enlighten.
-  Thread -> id: 574 -> priority: 1 
-  Thread -> id: 2574 -> priority: 1 
-Connected to lighthouse:LHR-13DC0144
+  Thread -> id: 3f30 -> priority: 1 
+  Thread -> id: 1158 -> priority: 1 
+OpenVR Shutdown
  
-(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+(Filename:  Line: 815)
 

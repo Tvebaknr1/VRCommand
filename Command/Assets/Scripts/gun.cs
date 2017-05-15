@@ -27,8 +27,11 @@ public class gun : NetworkBehaviour {
     void Awake()
     {
         trackedObj = GetComponent<SteamVR_TrackedObject>();
-        switchGun();
         player = transform.GetComponentInParent<Transform>().GetComponentInParent<shot>();
+        Debug.Log("1. test" + text);
+        text = transform.GetComponentInChildren<Canvas>().GetComponentInChildren<Hand_Text_maneger>();
+        Debug.Log("test" + text);
+        switchGun();
     }
     // Update is called once per frame
     //[Command]
@@ -44,7 +47,7 @@ public class gun : NetworkBehaviour {
         gunSound = temp.gunsound;
         reloadSound = temp.reloadSound;
         text.setNewGun(temp.magsize,magsize,temp.Gunname);
-
+        Debug.Log("complete");
     }
     void Update () {
         cooldown -= Time.deltaTime;
