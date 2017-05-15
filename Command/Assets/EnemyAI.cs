@@ -13,7 +13,7 @@ public class EnemyAI : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        player = GameObject.FindGameObjectWithTag("VRPlayer");
+        player = GameObject.FindGameObjectWithTag("playerModel");
         if (player != null)
         {
             agent.SetDestination(player.transform.position);

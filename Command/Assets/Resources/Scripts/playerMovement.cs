@@ -16,7 +16,7 @@ public class playerMovement : NetworkBehaviour {
     void Start () {
 
         
-         agent = GetComponent<NavMeshAgent>();
+        agent = GetComponent<NavMeshAgent>();
         agent.updateRotation = false;
         //agent.updatePosition = false;
         //parent = GetComponentInParent<Transform>().gameObject;
