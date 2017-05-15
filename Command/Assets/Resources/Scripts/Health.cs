@@ -34,7 +34,7 @@ public class Health : NetworkBehaviour
         {
             if (destroyOnDeath)
             {
-                score.incScore(1);
+               // score.incScore(1);
                 Destroy(gameObject);
             }
             else
