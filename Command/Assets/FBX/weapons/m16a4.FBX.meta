@@ -1,0 +1,158 @@
+fileFormatVersion: 2
+guid: c3289904d1269a3479fbb465e43c6005
+timeCreated: 1494848841
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: m16a4
+    100004: m16a4_barrel
+    100006: m16a4_bolt carrier
+    100008: m16a4_carry handle
+    100010: m16a4_charging handle
+    100012: m16a4_Cylinder011
+    100014: m16a4_ejection port cover
+    100016: m16a4_ejection port cover pin
+    100018: m16a4_front sight
+    100020: m16a4_grip
+    100022: m16a4_hand guard
+    100024: m16a4_mag
+    100026: m16a4_muzzle break
+    100028: m16a4_Picatinny rail
+    100030: m16a4_stock
+    100032: m16a4_trigger
+    400000: //RootNode
+    400002: m16a4
+    400004: m16a4_barrel
+    400006: m16a4_bolt carrier
+    400008: m16a4_carry handle
+    400010: m16a4_charging handle
+    400012: m16a4_Cylinder011
+    400014: m16a4_ejection port cover
+    400016: m16a4_ejection port cover pin
+    400018: m16a4_front sight
+    400020: m16a4_grip
+    400022: m16a4_hand guard
+    400024: m16a4_mag
+    400026: m16a4_muzzle break
+    400028: m16a4_Picatinny rail
+    400030: m16a4_stock
+    400032: m16a4_trigger
+    2300000: m16a4
+    2300002: m16a4_barrel
+    2300004: m16a4_bolt carrier
+    2300006: m16a4_carry handle
+    2300008: m16a4_charging handle
+    2300010: m16a4_Cylinder011
+    2300012: m16a4_ejection port cover
+    2300014: m16a4_ejection port cover pin
+    2300016: m16a4_front sight
+    2300018: m16a4_grip
+    2300020: m16a4_hand guard
+    2300022: m16a4_mag
+    2300024: m16a4_muzzle break
+    2300026: m16a4_Picatinny rail
+    2300028: m16a4_stock
+    2300030: m16a4_trigger
+    3300000: m16a4
+    3300002: m16a4_barrel
+    3300004: m16a4_bolt carrier
+    3300006: m16a4_carry handle
+    3300008: m16a4_charging handle
+    3300010: m16a4_Cylinder011
+    3300012: m16a4_ejection port cover
+    3300014: m16a4_ejection port cover pin
+    3300016: m16a4_front sight
+    3300018: m16a4_grip
+    3300020: m16a4_hand guard
+    3300022: m16a4_mag
+    3300024: m16a4_muzzle break
+    3300026: m16a4_Picatinny rail
+    3300028: m16a4_stock
+    3300030: m16a4_trigger
+    4300000: m16a4
+    4300002: m16a4_ejection port cover pin
+    4300004: m16a4_ejection port cover
+    4300006: m16a4_mag
+    4300008: m16a4_grip
+    4300010: m16a4_trigger
+    4300012: m16a4_stock
+    4300014: m16a4_hand guard
+    4300016: m16a4_front sight
+    4300018: m16a4_barrel
+    4300020: m16a4_muzzle break
+    4300022: m16a4_Picatinny rail
+    4300024: m16a4_carry handle
+    4300026: m16a4_charging handle
+    4300028: m16a4_Cylinder011
+    4300030: m16a4_bolt carrier
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
