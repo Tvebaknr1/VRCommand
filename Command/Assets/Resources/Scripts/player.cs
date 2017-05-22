@@ -8,6 +8,8 @@ public class player : MonoBehaviour {
     public bool networkman;
     private LayerMask shootMask;
     public GameObject model;
+    [SyncVar]
+    Vector3 dir;
 
     private void Awake()
     {
@@ -27,6 +29,14 @@ public class player : MonoBehaviour {
     }
     private void Update()
     {
-        model.transform.LookAt(this.transform.forward);
+        CmdTarget();
+        model.transform.LookAt(dir);
+        
+    }
+
+    [Command]
+    private void CmdTarget()
+    {
+        dir = this.transform.forward;
     }
 }
