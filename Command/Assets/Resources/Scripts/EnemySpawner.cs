@@ -22,20 +22,20 @@ public class EnemySpawner : NetworkBehaviour {
         spawnCooldown -= Time.deltaTime;
             if (0 > spawnCooldown)
             {
-                int spawn = Random.Range(0, spawnPoints.Length);
+                int spawn = Random.Range(0, spawnPoints.Length );
 
 
-                /* var spawnPosition = new Vector3(
+                 var spawnPosition = new Vector3(
                     spawnPoints[spawn].x + Random.Range(-spawnSizes[spawn], spawnSizes[spawn]),
                     spawnPoints[spawn].y,
                     spawnPoints[spawn].z + Random.Range(-spawnSizes[spawn], spawnSizes[spawn]));
- */
+ 
                 var spawnRotation = Quaternion.Euler(
                     0.0f,
                     Random.Range(0, 180),
                     0.0f);
                    
-                var spawnPosition = spawnPoints[0];
+                //var spawnPosition = spawnPoints[0];
                 RaycastHit hit;
                 
                 if (Physics.Raycast(spawnPosition, player.transform.position- spawnPosition, out hit, 10000f))
