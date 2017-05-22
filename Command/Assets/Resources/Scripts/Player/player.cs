@@ -9,7 +9,7 @@ public class player : NetworkBehaviour {
     private LayerMask shootMask;
     public GameObject model;
     [SyncVar]
-    Vector3 dir;
+    public Vector3 dir;
 
     private void Awake()
     {

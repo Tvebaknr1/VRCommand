@@ -13,8 +13,9 @@ public class gun : NetworkBehaviour {
     public int magsize;
     public int bulletSpeed;
     public LayerMask shootMask;
-    public int rpm;
+    public float rpm;
     public float cooldown;
+    public int damage;
     public AudioClip gunSound;
     public AudioClip reloadSound;
     public shot player;
@@ -46,12 +47,13 @@ public class gun : NetworkBehaviour {
         magsize = temp.magsize;
         mag = magsize;
         gunSound = temp.gunsound;
+        damage = temp.damage;
         reloadSound = temp.reloadSound;
-        text.setNewGun(temp.magsize,magsize,temp.Gunname);
+        text.setNewGun(temp.magsize,magsize,temp.gunName);
     }
     void Update () {
         cooldown -= Time.deltaTime;
-
+        Debug.Log(cooldown);
         if (Controller.GetPressDown(SteamVR_Controller.ButtonMask.Trigger))
             Isfireing = true;
         if (Controller.GetPressUp(SteamVR_Controller.ButtonMask.Trigger))
@@ -76,7 +78,7 @@ public class gun : NetworkBehaviour {
                 {
                     hitpoint = transform.position + (transform.forward * 100);
                 }
-                player.shoot(hitpoint, trackedObj.transform.position, bulletSpeed, shootMask);
+                player.shoot(hitpoint, trackedObj.transform.position, bulletSpeed, shootMask, damage);
                 //player.CmdShoot();
                 cooldown = 60 / rpm;
                 mag--;
