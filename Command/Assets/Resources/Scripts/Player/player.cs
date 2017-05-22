@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 
-public class player : MonoBehaviour {
+public class player : NetworkBehaviour {
     public GameObject vrplayer;
     public bool networkman;
     private LayerMask shootMask;
